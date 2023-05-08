@@ -89,3 +89,6 @@ for xml_file_name in xml_file_names:
 # Commit the changes and close the database connection
 conn.commit()
 conn.close()
+
+# I used pokedex.xml to import
+# `python3 Import.py pokedex.xml`
