@@ -47,6 +47,10 @@ c = conn.cursor()
 # Create the Pokemon table if it doesn't exist
 c.execute(pokemon_table_schema)
 
+if len(sys.argv) < 2:
+     print("You must pass at least one XML file name containing Pokemon to insert")
+     sys.exit()
+
 # Get the file name from command line argument
 file_name = sys.argv[1]
 
