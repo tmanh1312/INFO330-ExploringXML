@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<pokemon generation="4" pokedexNumber="802" classification="Gloomdweller Pokémon">
+    <name>Marshadow</name>
+    <type>ghost</type>
+    <hp>90</hp>
+    <attack>125</attack>
+    <defense>80</defense>
+    <speed>125</speed>
+    <sp_attack>90</sp_attack>
+    <sp_defense>90</sp_defense>
+    <height>
+        <m>0.7</m>
+    </height>
+    <weight>
+        <kg>22.2</kg>
+    </weight>
+    <abilities>
+        <ability>Technician</ability>
+        <ability>Iron Fist</ability>
+    </abilities>
+</pokemon>
