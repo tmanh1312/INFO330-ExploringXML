@@ -15,7 +15,7 @@
   then update the HTML version of these rules below (and comment these out!) to see a nicely-
   formatted HTML file.
   -->
-<xsl:template match="/pokedex">
+<!-- <xsl:template match="/pokedex">
     Strong attackers:
     <xsl:apply-templates select="pokemon[attack/text() > 150]" />
     Strong defenders:
@@ -26,34 +26,34 @@
 
 <xsl:template match="pokemon">
     <xsl:value-of select="./name" /> (<xsl:value-of select="@pokedexNumber" />): <xsl:apply-templates select="type" />
-</xsl:template>
-
+</xsl:template> -->
+ 
 <!--
   These rules will generate HTML output rather than text. This is to demonstrate
   the power of using XSLT to create pretty output from XML sources.
   -->
-<!--
 <xsl:template match="/pokedex">
   <html>
-  <body>
+    <body>
   <h2>Generation One Pokemon</h2>
   <table border="1">
     <tr bgcolor="#9acd32">
       <th>Name</th>
       <th>Classification</th>
     </tr>
-    <xsl:apply-templates select="pokemon[@generation='1']" />
+      Strong attackers: <xsl:apply-templates select="pokemon[attack/text() &gt; 150]" />
+
+      Strong defenders: <xsl:apply-templates select="pokemon[defense/text() &gt; 150]" />
+
+      Fast: <xsl:apply-templates select="pokemon[speed/text() &gt; 150]" />
   </table>
   </body>
   </html>
 </xsl:template>
 
 <xsl:template match="pokemon">
-    <tr>
-      <td><xsl:value-of select="./name" />(<xsl:value-of select="@pokedexNumber" />)</td>
-      <td><xsl:value-of select="./@classification" /></td>
-    </tr>
-</xsl:template>
--->
+  <xsl:value-of select="./name" /> (<xsl:value-of select="@pokedexNumber" />): <xsl:apply-templates select="type" /> 
+  <!-- <xsl:if test="position() != last()">, </xsl:if> --> <!-- To split different Pokemon by comma -->
+</xsl:template> 
 
 </xsl:stylesheet>
